@@ -173,7 +173,7 @@ ol {
   display: block;
 }
 
-.search-form__label-text:hover, .button:hover {
+.search-form__label-text:hover, .search-form__pseudo-checkbox:hover + .search-form__label-text, .button:hover {
   text-decoration-line: underline;
   cursor: pointer;
 }
@@ -308,8 +308,10 @@ ol {
 }
 /* ============================================  */
 
+/* =============== Управление preloader и error  ===============  */
 .result__video-container .preloader,
 .content__list-container .preloader,
 .result__video-container .error{
   display: flex;
 }
+/* ============================================  */
