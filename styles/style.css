@@ -220,7 +220,7 @@ ol {
   min-width: 399px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .content__list-container {
