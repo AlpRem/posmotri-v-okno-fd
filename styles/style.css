@@ -216,15 +216,16 @@ ol {
 
 /* =============== Блок content__details  ===============  */
 .content__details {
-  max-height: 531px;
+  min-height: 531px;
+  min-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
 .content__list-container {
-  height: auto;
-  /*overflow: auto;*/
+  max-height: 298px;
+  position: relative;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -254,6 +255,7 @@ ol {
 
 .result__video-container {
   height: 100%;
+  position: relative;
 }
 
 .content__video-card {
@@ -304,3 +306,9 @@ ol {
   text-overflow: ellipsis;
 }
 /* ============================================  */
+
+.result__video-container .preloader,
+.content__list-container .preloader,
+.result__video-container .error{
+  display: flex;
+}
