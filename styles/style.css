@@ -108,7 +108,6 @@ ol {
   display: flex;
   width: fit-content;
   align-items: center;
-  padding: 1px;
 }
 
 .search-form__fieldset-title {
