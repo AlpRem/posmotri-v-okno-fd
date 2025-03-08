@@ -16,6 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 h1,
@@ -62,12 +66,6 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -87,8 +85,8 @@ ol {
 
 .result__video {
   object-fit: cover;
-  width: 711px;
-  height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 /*  --============= Блок search-form  =============--  */
@@ -115,7 +113,6 @@ ol {
 
 .search-form__fieldset-title {
   font: inherit;
-  height: 22px;
 }
 
 /*    -- -- ========= Стилизация input ========= -- --  */
@@ -173,17 +170,21 @@ ol {
   display: block;
 }
 
-.search-form__label-text:hover, .search-form__pseudo-checkbox:hover + .search-form__label-text, .button:hover {
-  text-decoration-line: underline;
-  cursor: pointer;
+.search-form__label:hover .search-form__label-text {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.search-form__label:has(.search-form__textfield):hover .search-form__label-text {
+  text-decoration-line: none;
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px inset #fff;
 }
 /*    -- -- ==================================== -- --  */
-/*    -- -- ========= Стилизация button ====== -- --  */
 
+/*    -- -- ========= Стилизация button ====== -- --  */
 .button {
   font: inherit;
   font-weight: 700;
@@ -216,7 +217,6 @@ ol {
 
 /* =============== Блок content__details  ===============  */
 .content__details {
-  min-height: 531px;
   min-width: 399px;
   display: flex;
   flex-direction: column;
@@ -226,7 +226,6 @@ ol {
 .content__list-container {
   max-height: 298px;
   position: relative;
-  overflow: hidden;
   overflow-y: auto;
 }
 
@@ -265,7 +264,7 @@ ol {
   background: inherit;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration-line: underline;
   text-decoration-color: #fff;
   cursor: pointer;
@@ -305,13 +304,5 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-}
-/* ============================================  */
-
-/* =============== Управление preloader и error  ===============  */
-.result__video-container .preloader,
-.content__list-container .preloader,
-.result__video-container .error{
-  display: flex;
 }
 /* ============================================  */
