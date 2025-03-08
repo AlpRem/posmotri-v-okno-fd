@@ -282,6 +282,10 @@ ol {
   text-decoration: none;
 }
 
+.content__card-link:active{
+  background-color: #545050;
+}
+
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
