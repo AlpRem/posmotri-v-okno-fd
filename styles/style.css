@@ -108,6 +108,7 @@ ol {
   display: flex;
   width: fit-content;
   align-items: center;
+  padding: 1px;
 }
 
 .search-form__fieldset-title {
@@ -123,7 +124,10 @@ ol {
   background-color: transparent;
   border-left: none;
   border-right: none;
+  border-top: 1px  solid #fff;
+  border-bottom: 1px  solid #fff;
   appearance: none;
+  padding: 1px;
 }
 
 .search-form__textfield::placeholder {
