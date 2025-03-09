@@ -112,6 +112,7 @@ ol {
 
 .search-form__fieldset-title {
   font: inherit;
+  padding-bottom: 2px;
 }
 
 /*    -- -- ========= Стилизация input ========= -- --  */
